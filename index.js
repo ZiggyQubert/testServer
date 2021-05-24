@@ -4,7 +4,7 @@ const app = express();
 const PORT = 3000;
  
 app.get('/', function (req, res) {
-  res.send(`Hello World!<br />${new Date().toGMTString()}`);
+  res.send(`Hello World!<br />${new Date().toGMTString()}<br />Test push!`);
 });
  
 app.listen(PORT, () => {
