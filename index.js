@@ -14,8 +14,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/info', (req, res) => {
-  if (process.env.ECS_CONTAINER_METADATA_URI_V4) {
-    http.get(process.env.ECS_CONTAINER_METADATA_URI_V4, function (err, res) {
+  if (process.env.ECS_CONTAINER_METADATA_URI) {
+    http.get(`${process.env.ECS_CONTAINER_METADATA_URI}`, function (err, res) {
       if (err) {
         res.error(err);
         return;
